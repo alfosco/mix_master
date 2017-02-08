@@ -27,13 +27,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 gem 'unicorn'
 
+gem 'rails_12factor', group: :production
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'launchy'
+  gem 'capybara'
   gem 'rspec-rails'
   gem 'byebug'
+  gem 'shoulda-matchers'
 end
 
 group :development do
